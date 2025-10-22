@@ -1,0 +1,592 @@
+.root {
+  --accent-pink: rgb(255, 155, 171);
+  --accent-green: lightgreen;
+  --bg-color: #121212;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: white;
+}
+
+
+
+.landing-page {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background: url("https://wallpapers.com/images/hd/vagabond-manga-battlefield-aftermath-6f3y63cpz8ilrafo.jpg") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+}
+
+
+.welcome-text {
+  text-align: center;
+  animation: fadeIn 2s ease-out forwards;
+  background: rgba(0,0,0,0.6);
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  margin-bottom: 3rem; 
+}
+
+.welcome-text h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: var(--accent-pink);
+}
+
+.welcome-text p {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  color: var(--accent-green);
+}
+
+
+
+.landing-buttons {
+  display: flex;
+  flex-direction: row; 
+  gap: 1.5rem;
+  align-items: center;
+  animation: fadeIn 3s ease-out forwards;
+}
+
+.landing-buttons a {
+  text-decoration: none;
+  font-size: 2rem;         
+  padding: 1rem 3rem;
+  border: 2px solid var(--accent-pink);
+  border-radius: 12px;
+  background: rgba(0,0,0,0.3); 
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.landing-buttons a:hover {
+  background: rgba(255, 155, 171, 0.6);
+  color: black;
+  transform: scale(1.1);
+}
+
+
+
+.side-nav {
+  position: fixed;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.side-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.side-nav a:hover {
+  color: var(--accent-pink);
+}
+
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .welcome-text h1 {
+    font-size: 2.2rem;
+  }
+  .welcome-text p {
+    font-size: 1.2rem;
+  }
+  .landing-buttons a {
+    font-size: 1.5rem;
+    padding: 0.8rem 2rem;
+  }
+  .side-nav {
+    left: 1rem;
+  }
+}
+
+
+/* ABOUT */
+
+.about-section {
+  min-height: 100vh;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.about-section h1 {
+  font-size: 2.8rem;
+  color: var(--accent-pink);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.about-section h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-green);
+  margin: 0.5rem auto 1.5rem;
+  border-radius: 2px;
+}
+
+.about-section p {
+  max-width: 800px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #f0f0f0;
+}
+
+.cv-button {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--accent-pink);
+  border: 2px solid var(--accent-pink);
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.cv-button:hover {
+  background-color: var(--accent-pink);
+  color: black;
+  transform: scale(1.05);
+}
+
+
+
+
+/* ABOUT */
+.about-page {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background: url('BESERK.gif') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-buttons {
+  position: absolute;
+  top: 30px;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.nav-buttons a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 25px;
+  border: 2px solid white;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  transition: 0.3s ease;
+}
+
+.nav-buttons a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+.about-container {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 40px;
+  width: 70%;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.about-container h1 {
+  font-size: 2.5rem;
+  color: #ff8bd1;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f5f5f5;
+}
+
+.cv-button {
+  display: inline-block;
+  margin-top: 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 30px;
+  border: 2px solid #ff8bd1;
+  border-radius: 25px;
+  background-color: rgba(255, 139, 209, 0.2);
+  transition: 0.3s ease;
+}
+
+.cv-button:hover {
+  background-color: #ff8bd1;
+  color: black;
+  transform: scale(1.05);
+}
+
+
+
+
+.skills-page {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background: url('BESERK.gif') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.skills-container {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 40px;
+  width: 85%;
+  max-width: 1000px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.skills-container h1 {
+  font-size: 2.5rem;
+  color: #ffb8f4; 
+  margin-bottom: 20px;
+}
+
+.skills-container p {
+  font-size: 1.1rem;
+  color: #f5f5f5;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+
+
+.skill-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ffb8f4;
+  border-radius: 20px;
+  padding: 20px;
+  width: 160px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.skill-card:hover {
+  background-color: rgba(160, 233, 255, 0.3);
+  transform: scale(1.08);
+}
+
+.skill-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover img {
+  transform: scale(1.15);
+}
+
+
+
+.skill-card h3 {
+  color: #ffb8f4;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+
+.skill-card p {
+  font-size: 0.95rem;
+  color: #e8e8e8;
+  margin: 0;
+}
+
+.top-nav {
+  position: absolute;
+  top: 30px;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
+  transform: translateX(-20%);
+}
+
+.top-nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 25px;
+  border: 2px solid rgb(189, 189, 189);
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  transition: 0.3s ease;
+}
+
+.top-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+
+
+
+/* CONTACT */
+.contact-page {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background: url('bleach.gif') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-container {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 40px;
+  width: 70%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.contact-container h1 {
+  font-size: 2.5rem;
+  color: #ff8bd1;
+  margin-bottom: 20px;
+}
+
+.contact-container p {
+  font-size: 1.1rem;
+  color: #f5f5f5;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border: 2px solid #ff8bd1;
+  border-radius: 25px;
+  background-color: rgba(255, 139, 209, 0.2);
+  transition: 0.3s ease;
+  width: 60%;
+  text-align: center;
+}
+
+.contact-links a:hover {
+  background-color: #ff8bd1;
+  color: black;
+  transform: scale(1.05);
+}
+
+
+
+
+/* PROJECTS */
+.projects-page {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background: url('BESERK.gif') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.nav-buttons {
+  position: absolute;
+  top: 30px;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.nav-buttons a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 25px;
+  border: 2px solid white;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  transition: 0.3s ease;
+}
+
+.nav-buttons a:hover,
+.nav-buttons a.active {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+.projects-container {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 40px;
+  width: 80%;
+  max-width: 1000px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  margin-top: 350px;
+}
+
+
+.projects-container h1 {
+  font-size: 2.5rem;
+  color: #ff8bd1;
+  margin-bottom: 20px;
+}
+
+.projects-container p {
+  font-size: 1.1rem;
+  color: #f5f5f5;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  color: #ff8bd1;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #eaeaea;
+  margin-bottom: 15px;
+}
+
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.project-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: 2px solid #ff8bd1;
+  border-radius: 25px;
+  background-color: rgba(255, 139, 209, 0.2);
+  transition: 0.3s ease;
+}
+
+.project-links a:hover {
+  background-color: #ff8bd1;
+  color: black;
+  transform: scale(1.05);
+}
+
